@@ -4,6 +4,7 @@ on:
 
 jobs:
   job-name:
+    if: github.actor != 'Copilot'
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'done'
+      - run: echo "${{ github.actor }}"
